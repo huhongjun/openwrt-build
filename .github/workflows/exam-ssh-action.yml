@@ -57,6 +57,8 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        echo ${{ secrets.TELEGRAM_CHAT_ID }}
+        echo ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
