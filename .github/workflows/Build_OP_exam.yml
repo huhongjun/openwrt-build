@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: test ssh action
+name: BuildOP(test ssh)
 
 on:
   repository_dispatch:
