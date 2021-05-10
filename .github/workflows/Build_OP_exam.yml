@@ -54,11 +54,12 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+
     - name: Clone source code
       working-directory: /workdir
       run: |
         df -hT $PWD
-        chmod +x $DIY_P3_SH
+        chmod +x $GITHUB_WORKSPACE/$DIY_P3_SH
         $GITHUB_WORKSPACE/$DIY_P3_SH
         # FIRMWARE=$GITHUB_WORKSPACE/openwrt.tar.gz
 
